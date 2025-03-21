@@ -1,14 +1,14 @@
-package no.fintlabs.status.models
+package no.fintlabs.status.models.error
 
 class ConsumerError(
     val domain: String,
     val pkg: String,
     val org: String,
-    val name: String,
-    val message: String?,
-    val stacktrace: Array<StackTraceElement>,
-    val time: Long
-) {
+    override val name: String,
+    override val message: String?,
+    override val stacktrace: Array<StackTraceElement>,
+    override val time: Long
+) : Error {
     companion object {
         fun fromException(ex: Exception, domain: String, pkg: String, org: String) =
             ConsumerError(
