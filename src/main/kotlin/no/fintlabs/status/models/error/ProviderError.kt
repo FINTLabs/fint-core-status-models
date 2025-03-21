@@ -8,6 +8,7 @@ class ProviderError(
 ) : Error {
 
     companion object {
+        @JvmStatic
         fun fromException(ex: Exception) =
             ProviderError(
                 name = ex.javaClass.simpleName,

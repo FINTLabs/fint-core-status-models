@@ -10,6 +10,7 @@ class ConsumerError(
     override val time: Long
 ) : Error {
     companion object {
+        @JvmStatic
         fun fromException(ex: Exception, domain: String, pkg: String, org: String) =
             ConsumerError(
                 domain = domain,
