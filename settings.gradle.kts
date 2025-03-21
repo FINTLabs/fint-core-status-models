@@ -1,1 +1,1 @@
-rootProject.name = "fint-core-status-service-library"
+rootProject.name = "fint-core-status-models"
