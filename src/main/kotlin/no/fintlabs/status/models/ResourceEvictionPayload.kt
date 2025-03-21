@@ -5,5 +5,5 @@ data class ResourceEvictionPayload(
     val pkg: String,
     val resource: String,
     val org: String,
-    val unixTimestamp: Long
+    val unixTimestamp: Long = System.currentTimeMillis()
 )
